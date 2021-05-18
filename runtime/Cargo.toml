@@ -1,5 +1,5 @@
 [package]
-authors = ['Substrate DevHub <https://github.com/substrate-developer-hub>']
+authors = ['Joshua Waller']
 edition = '2018'
 homepage = 'https://substrate.dev'
 license = 'Unlicense'
@@ -14,7 +14,7 @@ targets = ['x86_64-unknown-linux-gnu']
 substrate-wasm-builder = '4.0.0'
 
 [dependencies]
-codec = { default-features = false, features = ['derive'], package = 'parity-scale-codec', version = '2.0.0' }
+codec = { default-features = false, features = ['derive'], package = 'parity-scale-codec', version = '2.1.1' }
 hex-literal = { optional = true, version = '0.3.1' }
 serde = { version = "1.0.119", optional = true, features = ["derive"] }
 
@@ -47,6 +47,7 @@ sp-version = { default-features = false, version = '3.0.0' }
 
 # local dependencies
 pallet-template = { default-features = false, path = '../pallets/template', version = '3.0.0' }
+pallet-kitties = { default-features = false, path = '../pallets/kitties' }
 
 [features]
 default = ['std']
@@ -88,4 +89,5 @@ std = [
     'sp-std/std',
     'sp-transaction-pool/std',
     'sp-version/std',
+    'pallet-kitties/std',
 ]
